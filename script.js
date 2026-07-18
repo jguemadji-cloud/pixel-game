@@ -9,7 +9,7 @@ function jump() {
     
     setTimeout(function () {
       player.classList.remove("jump");
-    }, 500);
+    }, 600);
   }
 }
 
@@ -28,7 +28,8 @@ setInterval(function () {
   let playerBottom = parseInt(window.getComputedStyle(player).getPropertyValue("bottom"));
   let obstacleLeft = parseInt(window.getComputedStyle(obstacle).getPropertyValue("left"));
 
-  if (obstacleLeft > 50 && obstacleLeft < 90 && playerBottom <= 40) {
+  // Angepasste Hitbox für das 800px-Feld (Spieler steht bei left: 80px)
+  if (obstacleLeft > 80 && obstacleLeft < 130 && playerBottom <= 50) {
     obstacle.classList.remove("obstacle-move");
     alert("Game Over!");
     obstacle.classList.add("obstacle-move");

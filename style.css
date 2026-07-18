@@ -41,8 +41,7 @@ body, html {
   bottom: 0;
   left: 80px;
   /* Füge hier deine kopierte URL aus Webflow ein: */
-  background-image: url("https://cdn.prod.website-files.com/6a3174f505a50d875e617a34/6a5be27bd17f723776dff219_Gemini_Generated_Image_huj2e8huj2e8huj2%20(1)-Photoroom.png");
-  background-size: contain;
+background-image: url('https://cdn.prod.website-files.com/6a3174f505a50d875e617a34/6a5be27bd17f723776dff219_Gemini_Generated_Image_huj2e8huj2e8huj2%20(1)-Photoroom.png');  background-size: contain;
   background-repeat: no-repeat;
   background-position: bottom;
   image-rendering: pixelated; /* Hält deinen Avatar knackscharf verpixelt */

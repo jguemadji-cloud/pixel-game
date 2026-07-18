@@ -1,61 +1,89 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: #1a1a1a; /* Dunkler, stylischer Hintergrund */
+  font-family: 'Courier New', Courier, monospace;
+}
+
 .game-viewport {
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-family: 'Courier New', Courier, monospace;
-  margin-top: 50px;
+  position: relative;
 }
 
 #game-container {
-  width: 600px;
-  height: 200px;
-  border-bottom: 4px solid #333;
+  width: 100%;
+  max-width: 800px; /* Perfekte Breite für das Gameplay */
+  height: 300px;
+  border-bottom: 6px dashed #555; /* Cooler Retro-Boden */
   position: relative;
   overflow: hidden;
-  background-color: #f7f7f7;
+  background: linear-gradient(to bottom, #2c3e50, #0f172a); /* Schöner CSS-Nachthimmel */
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  border-radius: 8px;
 }
 
 #player {
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
   position: absolute;
   bottom: 0;
-  left: 50px;
-  background-color: #2ecc71;
-  background-size: cover;
+  left: 80px;
+  /* Füge hier deine kopierte URL aus Webflow ein: */
+  background-image: url('HIER_DEINE_KOPIERTE_AVATAR_BILD_URL_EINFÜGEN');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  image-rendering: pixelated; /* Hält deinen Avatar knackscharf verpixelt */
+  z-index: 2;
 }
 
 #obstacle {
-  width: 20px;
-  height: 40px;
-  background-color: #e74c3c;
+  width: 25px;
+  height: 50px;
+  background: linear-gradient(to top, #ff416c, #ff4b2b); /* Neon-rotes Hindernis */
+  border-radius: 4px 4px 0 0;
   position: absolute;
   bottom: 0;
-  right: -20px;
+  right: -30px;
+  z-index: 1;
 }
 
 .jump {
-  animation: jumpAnimation 500ms linear;
+  animation: jumpAnimation 600ms cubic-bezier(0.25, 1, 0.5, 1);
 }
 
 @keyframes jumpAnimation {
   0% { bottom: 0; }
-  50% { bottom: 100px; }
+  45% { bottom: 140px; } /* Schöne, flüssige Sprunghöhe */
   100% { bottom: 0; }
 }
 
 .obstacle-move {
-  animation: blockMove 1.5s infinite linear;
+  animation: blockMove 1.4s infinite linear;
 }
 
 @keyframes blockMove {
-  0% { right: -20px; }
-  100% { right: 620px; }
+  0% { right: -30px; }
+  100% { right: 850px; }
 }
 
 .controls-hint {
-  margin-top: 15px;
-  color: #666;
-  font-size: 14px;
+  position: absolute;
+  bottom: 20px;
+  color: #8892b0;
+  font-size: 16px;
+  letter-spacing: 1px;
+  text-align: center;
 }

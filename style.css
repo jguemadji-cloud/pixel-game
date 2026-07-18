@@ -35,17 +35,17 @@ body, html {
 }
 
 #player {
-  width: 50px;
-  height: 50px;
+  width: 60px;        
+  height: 75px;       
   position: absolute;
   bottom: 0;
   left: 80px;
-  /* Füge hier deine kopierte URL aus Webflow ein: */
-background-image: url('https://cdn.prod.website-files.com/6a3174f505a50d875e617a34/6a5be27bd17f723776dff219_Gemini_Generated_Image_huj2e8huj2e8huj2%20(1)-Photoroom.png');  
+  /* Verweist jetzt direkt auf dein hochgeladenes GitHub-Bild: */
+  background-image: url('avatar.png');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: bottom;
-  image-rendering: pixelated; /* Hält deinen Avatar knackscharf verpixelt */
+  image-rendering: pixelated; 
   z-index: 2;
 }
 
